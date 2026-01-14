@@ -1,5 +1,7 @@
 package studio0;
 
+import java.text.DecimalFormat;
+
 public class MilageReport {
 	
 	public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class MilageReport {
 		double totalGallons = totalMiles / milesPerGallon;
 		double pricePerGallon = 3.05;
 		double totalPrice = totalGallons * pricePerGallon;
-		
-		System.out.println("Total price spent on gas was $" + totalPrice);
+		double totalPriceRound = ((int)(totalPrice * 100))/100.00; //typecasting
+		System.out.println("Total price spent on gas was $" + totalPriceRound);
 	}
 }
